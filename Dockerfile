@@ -32,8 +32,8 @@ RUN git clone https://github.com/dsilabs/zoom.git
 RUN pip3.6 install -r zoom/requirements.txt
 RUN echo /work/zoom > zoom.pth
 RUN mv zoom.pth /usr/local/lib/python3.6/site-packages
-RUN chmod +x zoom/tools/zoom/zoom
-RUN ln -s /work/zoom/tools/zoom/zoom /usr/local/bin/zoom
+RUN chmod +x zoom/bin
+RUN ln -s /work/zoom/bin/zoom /usr/local/bin/zoom
 
 # setup a default instance
 RUN cp -r /work/zoom/web /work/web
